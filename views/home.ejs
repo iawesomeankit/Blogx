@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('./partials/head')%>
+        <title>Document</title>
+</head>
+<!-- <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+     :root {
+        --dark: #2b2d42;
+    }
+    
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+    
+    .container {
+        height: 100vh;
+        width: 100vw;
+        /* background-color: #edf2f4;  */
+        display: flex;
+    }
+    
+    .container h1 {
+        color: var(--dark);
+        font-size: 50px;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+    
+    .blogs__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .post {
+        background-color: white;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 2rem;
+        text-decoration: none;
+        color: var(--dark);
+        border: 2px solid black;
+        margin-bottom: 20px;
+    }
+    
+    .post:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .post img {
+        height: 50%;
+        width: 90%;
+        object-fit: cover;
+        border: 1px solid #ddd
+    }
+    
+    .post small {
+        margin: 10px 0;
+        padding: 3px 10px;
+        background-color: var(--dark);
+        border-radius: 10px;
+        color: white;
+        width: fit-content;
+    }
+    
+    .post .description {
+        margin: 10px 0;
+        height: 30%;
+    }
+    
+    .post .more {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: cornflowerblue;
+    }
+    
+    .more p {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    
+    .more i {
+        font-size: 25px;
+    }
+</style> -->
+
+<body>
+
+    <%-include('./partials/nav')%>
+        <div class="container mt-3">
+            <div class="row row-cols-3">
+                <% blogs.forEach(blog => { %>
+                    <div class="col">
+                        <div class="card col" style="width: 18rem">
+                            <img src="<%= blog.coverImageURL %>" class="card-img-top" />
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%= blog.title %>
+                                </h5>
+                                <a href="/blog/<%= blog._id %>" class="btn btn-primary">View</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+        <!-- <br>
+        <div class="container">
+            <div class="blogs__container">
+                <% blogs.forEach(blog => { %>
+                    <div class="post">
+                        <img src="<%= blog.coverImageURL %>">
+                        <h6>
+                            <%= blog.title %>
+                        </h6>
+                        <div class="more">
+                            <a href="/blog/<%= blog._id %>" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </div> -->
+
+        <!-- asdas -->
+
+        <%-include('./partials/head')%>
+</body>
+
+</html>
